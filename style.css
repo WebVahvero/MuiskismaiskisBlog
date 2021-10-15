@@ -97,6 +97,7 @@ main {
     justify-content: center;
     align-items: center;
     background-color: var(--heafoo-color);
+    max-width: 100%;
 }
 
 section.hero {
