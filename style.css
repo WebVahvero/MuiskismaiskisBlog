@@ -23,6 +23,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: var(--heafoo-color);
+    max-width: 100%;
 }
 
 /*TOP PAGE*/
@@ -196,7 +197,7 @@ h6 {
 
 footer {
  margin-top: 5em;
-min-width: 100%;
+ min-width: 100%;
  background-color: var(--heafoo-bg);
  display: flex;
  justify-content: space-between;
