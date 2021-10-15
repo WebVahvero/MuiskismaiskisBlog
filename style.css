@@ -17,12 +17,8 @@
 }
 
 body {
-    margin-top: 20vh;
     font-family: 'Poppins', sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    
     background-color: var(--heafoo-color);
 }
 
@@ -34,11 +30,6 @@ header {
     align-items: center;
     background-color: var(--heafoo-bg);
     box-shadow: 1px 5px 15px 5px rgba(0,0,0,0.25);
-    overflow: hidden;
-    position: fixed;
-    padding-top: 1em;
-    top: 0;
-    width: 100%;
 }
 
 h2 {
@@ -102,12 +93,20 @@ h1 {
     text-shadow: 1px 1px 6px rgba(0,0,0,0.35);
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 section.hero {
     display: flex;
     align-items: center;
     background-image: repeating-linear-gradient(90deg, rgba(236, 13, 35,0.5) 0px, rgba(236, 13, 35,0.5) 30px,transparent 30px, transparent 60px),repeating-linear-gradient(0deg, rgba(236, 13, 35,0.5) 0px, rgba(236, 13, 35,0.5) 30px,transparent 30px, transparent 60px),linear-gradient(90deg, hsl(94,64%,92%),hsl(94,64%,92%));
     min-height: 30vh;
-    max-width: 100%;
+    width: 100%;
+    background-attachment: fixed;
 }
 
 /*New Foods*/
