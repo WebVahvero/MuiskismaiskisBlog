@@ -97,7 +97,6 @@ main {
     justify-content: center;
     align-items: center;
     background-color: var(--heafoo-color);
-    max-width: 100%;
 }
 
 section.hero {
@@ -116,6 +115,7 @@ section.new-foods , .blog, .about {
     justify-content: space-between;
     align-items: center;
     text-align: center;
+    padding-bottom: 2em;
 }
 
 h3 {
@@ -198,7 +198,6 @@ h6 {
 /*footer*/
 
 footer {
- margin-top: 5em;
  min-width: 100%;
  background-color: var(--heafoo-bg);
  display: flex;
