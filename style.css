@@ -4,9 +4,10 @@
 
 /*Colors*/
 :root {
-    --heafoo-bg: #311E5C;
-    --heafoo-color: #14DE7C;
-    --heafoo-hover-color: #ffffff;
+    --heafoo-bg: rgb(239,89,87);
+    --heafoo-color: rgb(240,144,132);
+    --text-color: #ffffff;
+
 }
 
 /*BODY*/
@@ -26,12 +27,15 @@ body {
 
 /*TOP PAGE*/
 header {
-    width: 100%;
+    min-width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: var(--heafoo-bg);
-    box-shadow: 2px 20px 5px 0px rgba(0,0,0,0.40);
+    box-shadow: 1px 5px 15px 5px rgba(0,0,0,0.25);
+    position: sticky;
+    overflow: hidden;
+    z-index: 2;
 }
 
 h2 {
@@ -49,7 +53,7 @@ h2 {
     justify-content: start;
     text-align: center;
     padding: 1em;
-    color: var(--heafoo-color);
+    color: var(--text-color);
 }
 
 /*NAVIGATION*/
@@ -71,12 +75,13 @@ li {
 }
 
 a.nav-link {
-    color: var(--heafoo-color);
+    color: var(--text-color);
 }
 
 /*GENERAL*/
 a {
     text-decoration: none;
+    color: black;
 }
 
 img {
@@ -87,25 +92,27 @@ img {
 
 /*HERO*/
 h1 {
-    color: white;
+    color: black;
     text-align: center;
     padding: 1em;
     font-size: 2.5em;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.35);
 }
 
 section.hero {
     display: flex;
     align-items: center;
-    background-image: linear-gradient(45deg, rgb(20, 222, 124) 0%, rgb(20, 222, 124) 21%,rgb(25, 190, 119) 21%, rgb(25, 190, 119) 37%,rgb(30, 158, 113) 37%, rgb(30, 158, 113) 46%,rgb(35, 126, 108) 46%, rgb(35, 126, 108) 53%,rgb(39, 94, 103) 53%, rgb(39, 94, 103) 59%,rgb(44, 62, 97) 59%, rgb(44, 62, 97) 77%,rgb(49, 30, 92) 77%, rgb(49, 30, 92) 100%);
+    background-image: repeating-linear-gradient(90deg, rgba(236, 13, 35,0.5) 0px, rgba(236, 13, 35,0.5) 30px,transparent 30px, transparent 60px),repeating-linear-gradient(0deg, rgba(236, 13, 35,0.5) 0px, rgba(236, 13, 35,0.5) 30px,transparent 30px, transparent 60px),linear-gradient(90deg, hsl(94,64%,92%),hsl(94,64%,92%));
     min-height: 30vh;
 }
 
 /*New Foods*/
-section.new-foods {
+section.new-foods , .blog, .about {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
 }
 
 h3 {
@@ -113,24 +120,25 @@ h3 {
     text-align: center;
     padding: .8em;
     margin-top: 1.5em;
-    color: var(--heafoo-bg);
+    color: var(--text-color);
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.35);
+
 }
 
 button.section-end-button {
     background-color: var(--heafoo-bg);
-    color: var(--heafoo-color);
-    padding: 2em 3em 2em 3em;
+    color: var(--text-color);
+    padding: 1.5em 2.5em 1.5em 2.5em;
     border: none;
     border-radius: 2em;
     font-weight: bold;
     font-size: 1.2em;
     margin-top: 2em;
-    box-shadow: 2px 20px 101px 19px rgba(0,0,0,0.20);
+    box-shadow: 1px 5px 15px 5px rgba(0,0,0,0.25);
 }
 
-/*New Foods Card*/
-
-.food-card {
+/*New Foods Cards*/
+.food-card, .latest-blog-card {
     background-color: var(--heafoo-bg);
     width: 70%;
     height: 100%;
@@ -138,11 +146,11 @@ button.section-end-button {
     border-radius: 1em;
     text-align: center;
     margin: 1em 0 1em 0;
-    box-shadow: 2px 20px 101px 19px rgba(0,0,0,0.25);
+    box-shadow: 1px 5px 15px 5px rgba(0,0,0,0.25);
 }
 
 h5 {
-    color: var(--heafoo-color);
+    color: var(--text-color);
     padding-top: 1em;
     font-size: 1.4em;
 }
@@ -158,9 +166,58 @@ button.card-button {
     padding: 1em 2em 1em 2em;
     border: none;
     border-radius: 2em;
-    color: var(--heafoo-bg);
+    color: var(--text-color);
     font-weight: bold;
     font-size: 1em;
     margin: 1em;
-    box-shadow: 2px 20px 101px 19px rgba(20,222,124,0.20);
+    box-shadow: 1px 5px 15px 5px rgba(0,0,0,0.25);
+}
+
+/*Blog*/
+h4 {
+    padding: 1em;
+    color: var(--text-color);
+    font-size: 1.2em;
+}
+
+article {
+    text-align: center;
+    color: var(--text-color);
+}
+
+/*About*/
+h6 {
+    color: var(--text-color);
+    font-size: 1.2em;
+    margin-top: 1em;
+}
+
+/*footer*/
+
+footer {
+ margin-top: 5em;
+min-width: 100%;
+ background-color: var(--heafoo-bg);
+ display: flex;
+ justify-content: space-between;
+ flex-direction: column;
+ align-items: center;
+ box-shadow: 1px -5px 15px 2px rgba(0,0,0,0.2);
+ text-align: center;
+ padding: 2em 0 1em 0;
+}
+
+.some {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.someIcon {
+    height: 2.5em;
+    width: 2.5em;
+    padding: 1em;
+    margin: 0 1em 0 1em;
+    background-color: var(--heafoo-color);
+    border-radius: 1.5em;
 }
