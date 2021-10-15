@@ -1,0 +1,166 @@
+/*FONTS*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+
+/*Colors*/
+:root {
+    --heafoo-bg: #311E5C;
+    --heafoo-color: #14DE7C;
+    --heafoo-hover-color: #ffffff;
+}
+
+/*BODY*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--heafoo-color);
+}
+
+/*TOP PAGE*/
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--heafoo-bg);
+    box-shadow: 2px 20px 5px 0px rgba(0,0,0,0.40);
+}
+
+h2 {
+    font-size: 1.5em;
+    line-height: 0.9;
+}
+
+.cursiveLogo {
+    font-family: 'Parisienne', sans-serif;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    text-align: center;
+    padding: 1em;
+    color: var(--heafoo-color);
+}
+
+/*NAVIGATION*/
+nav {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: inline;
+    padding: 1em;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+a.nav-link {
+    color: var(--heafoo-color);
+}
+
+/*GENERAL*/
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1em;
+}
+
+/*HERO*/
+h1 {
+    color: white;
+    text-align: center;
+    padding: 1em;
+    font-size: 2.5em;
+}
+
+section.hero {
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(45deg, rgb(20, 222, 124) 0%, rgb(20, 222, 124) 21%,rgb(25, 190, 119) 21%, rgb(25, 190, 119) 37%,rgb(30, 158, 113) 37%, rgb(30, 158, 113) 46%,rgb(35, 126, 108) 46%, rgb(35, 126, 108) 53%,rgb(39, 94, 103) 53%, rgb(39, 94, 103) 59%,rgb(44, 62, 97) 59%, rgb(44, 62, 97) 77%,rgb(49, 30, 92) 77%, rgb(49, 30, 92) 100%);
+    min-height: 30vh;
+}
+
+/*New Foods*/
+section.new-foods {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h3 {
+    font-size: 2em;
+    text-align: center;
+    padding: .8em;
+    margin-top: 1.5em;
+    color: var(--heafoo-bg);
+}
+
+button.section-end-button {
+    background-color: var(--heafoo-bg);
+    color: var(--heafoo-color);
+    padding: 2em 3em 2em 3em;
+    border: none;
+    border-radius: 2em;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 2em;
+    box-shadow: 2px 20px 101px 19px rgba(0,0,0,0.20);
+}
+
+/*New Foods Card*/
+
+.food-card {
+    background-color: var(--heafoo-bg);
+    width: 70%;
+    height: 100%;
+    padding: 2em;
+    border-radius: 1em;
+    text-align: center;
+    margin: 1em 0 1em 0;
+    box-shadow: 2px 20px 101px 19px rgba(0,0,0,0.25);
+}
+
+h5 {
+    color: var(--heafoo-color);
+    padding-top: 1em;
+    font-size: 1.4em;
+}
+
+p {
+    color: white;
+    padding: .8em;
+    font-size: 1.2em;
+}
+
+button.card-button {
+    background-color: var(--heafoo-color);
+    padding: 1em 2em 1em 2em;
+    border: none;
+    border-radius: 2em;
+    color: var(--heafoo-bg);
+    font-weight: bold;
+    font-size: 1em;
+    margin: 1em;
+    box-shadow: 2px 20px 101px 19px rgba(20,222,124,0.20);
+}
