@@ -85,8 +85,8 @@ img {
 /*HERO*/
 h1 {
     color: black;
-    text-align: center;
     font-size: 2.5em;
+    text-align: center;
     text-shadow: 1px 1px 6px rgba(0,0,0,0.35);
 }
 
@@ -101,6 +101,7 @@ main {
 section.hero {
     display: flex;
     align-items: center;
+    justify-content: center;
     background-image: repeating-linear-gradient(90deg, rgba(236, 13, 35,0.5) 0px, rgba(236, 13, 35,0.5) 30px,transparent 30px, transparent 60px),repeating-linear-gradient(0deg, rgba(236, 13, 35,0.5) 0px, rgba(236, 13, 35,0.5) 30px,transparent 30px, transparent 60px),linear-gradient(90deg, hsl(94,64%,92%),hsl(94,64%,92%));
     min-height: 30vh;
     width: 100%;
@@ -140,6 +141,15 @@ button.section-end-button {
 }
 
 /*New Foods Cards*/
+.food-cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 2em;
+}
+
 .food-card, .latest-blog-card {
     background-color: var(--heafoo-bg);
     width: 70%;
@@ -221,4 +231,205 @@ footer {
     margin: 0 1em 0 1em;
     background-color: var(--heafoo-color);
     border-radius: 1.5em;
+}
+
+/*Responsive for tablet*/
+@media only screen and (min-width: 768px) {
+    
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    h2 {
+        font-size: 2em;
+    }
+    
+    .logo {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        text-align: center;
+        padding: 2em;
+        color: var(--text-color);
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 2em ;
+        padding-top: 1em;
+    }
+    
+    
+    li {
+        display: inline;
+        font-weight: bold;
+        font-size: 1.5em;
+    }
+    
+    h1 {
+        font-size: 3em;
+    }
+
+    h3 {
+        font-size: 2.5em;
+    }
+
+    h5 {
+        font-size: 1.6em;
+    }
+    
+    p {
+        font-size: 1.4em;
+    }
+    
+    button.card-button {
+        font-size: 1.2em;
+    }
+
+    h4 {
+        padding: 1em;
+        font-size: 1.8em;
+    }
+    
+    article {
+        color: var(--text-color);
+        font-size: 1.2em;
+    }
+}
+
+/*Responsive small laptop*/
+@media only screen and (min-width: 1200px) {
+    
+    h2 {
+        font-size: 2.5em;
+    }
+    
+    .logo {
+        padding: 3em;
+        padding-left: 4em;
+    }
+
+    nav {
+        padding-right: 4em;
+    }
+    
+    ul {
+        list-style: none;
+    }
+    
+    li {
+        display: inline;
+        font-weight: bold;
+        font-size: 2em;
+    }
+    
+    h1 {
+        font-size: 4em;
+    }
+
+    section.hero {
+        min-height: 40vh;
+    }
+
+    h3 {
+        margin-top: .6em;
+        font-size: 3em;
+    }
+
+    h5 {
+        font-size: 2em;
+    }
+
+    .food-cards{
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding-bottom: 1em;
+    }
+  
+    .food-card {
+        width: 25%;
+    }
+
+    h6 {
+        font-size: 1.8em;
+        margin-top: 1em;
+    }
+
+    .about p {
+        padding: 0 4em 2em 4em;
+    }
+
+    .about button.section-end-button {
+        margin-bottom: 5em;
+    }
+}
+
+/*Responsive laptop*/
+@media only screen and (min-width: 1680px) {
+    
+    h2 {
+        font-size: 2.5em;
+    }
+    
+    .logo {
+        padding: 3em;
+        padding-left: 4em;
+    }
+
+    nav {
+        padding-right: 4em;
+    }
+    
+    ul {
+        list-style: none;
+    }
+    
+    li {
+        display: inline;
+        font-weight: bold;
+        font-size: 2em;
+    }
+    
+    h1 {
+        font-size: 4em;
+    }
+
+    section.hero {
+        min-height: 40vh;
+    }
+
+    h3 {
+        margin-top: .6em;
+        font-size: 3em;
+    }
+
+    h5 {
+        font-size: 2em;
+    }
+
+    .food-cards{
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding-bottom: 1em;
+    }
+  
+    .food-card {
+        width: 25%;
+    }
+
+    h6 {
+        font-size: 1.8em;
+        margin-top: 1em;
+    }
+
+    .about p {
+        padding: 0 4em 2em 4em;
+    }
+
+    .about button.section-end-button {
+        margin-bottom: 5em;
+    }
 }
