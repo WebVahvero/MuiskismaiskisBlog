@@ -40,7 +40,6 @@ h1 {
     font-size: 3rem;
     text-align: center;
     text-shadow: 1px 1px 6px rgba(0,0,0,0.35);
-    padding: 1rem 3rem;
     line-height: 1;
     letter-spacing: 0.2rem;
 }
@@ -203,7 +202,7 @@ section.new-foods , .blog, .about {
     background-color: var(--card-color);
     width: 90%;
     height: auto;
-    padding: 2rem 3rem;
+    padding: 2rem 2rem;
     border-radius: 1em;
     text-align: center;
     margin: 1rem 1rem;
@@ -244,7 +243,7 @@ section.new-foods , .blog, .about {
 }
 
 .latest-blog-card {
-    padding: 2rem 2rem;
+    padding: 2rem 1rem;
 }
 
 /*footer*/
