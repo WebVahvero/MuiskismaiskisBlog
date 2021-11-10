@@ -24,9 +24,6 @@ html {
 
 body {
     font-family: 'Poppins', sans-serif;
-}
-
-main {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -165,7 +162,14 @@ section.hero {
     background-position: center;
     min-height: 80vh;
     width: 100%;
-    padding: 0 4rem;
+}
+
+.hero-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 40%;
 }
 
 img.ramen {
@@ -292,12 +296,12 @@ footer {
         font-size: 1.2rem;
     }
 
-    section.hero {
-        padding: 0 16rem;
-    }
-
     p, article {
         font-size: 1.2rem;
+    }
+
+    .hero-logo {
+        max-width: 30%;
     }
 }
 
@@ -306,10 +310,6 @@ footer {
     header {
         padding: 1rem 2rem;
     }
-    
-    section.hero {
-        padding: 0 20rem;
-     }
 
     .food-cards{
         flex-direction: row;
@@ -331,16 +331,16 @@ footer {
         transform: scale(1.02);
         transition: 500ms ease;
     }
+
+    .hero-logo {
+        max-width: 20%;
+    }
 }
 
 /*Responsive laptop*/
 @media only screen and (min-width: 1500px) {
     header {
         padding: 1rem 6rem;
-    }
-    
-    section.hero {
-       padding: 0 30rem;
     }
 
     .blog-cards {
@@ -363,9 +363,6 @@ footer {
 
 /*Responsive laptop*/
 @media only screen and (min-width: 1820px) {
-    section.hero {
-       padding: 0 40rem;
-    }
 
     .blog-cards {
         flex-direction: row;
@@ -382,5 +379,9 @@ footer {
 
     .about-card {
         width: 60%;
+    }
+
+    .hero-logo {
+        max-width: 10%;
     }
 }
