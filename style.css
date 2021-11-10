@@ -171,6 +171,14 @@ section.hero {
     align-items: center;
     justify-content: center;
     max-width: 40%;
+    position: relative;
+    animation: push 3s infinite ease-in-out;
+}
+
+@keyframes push {
+    0% {margin-top: 0;}
+    50% {margin-top: 2.5rem;}
+    100% {margin-top: 0;}
 }
 
 img.ramen {
