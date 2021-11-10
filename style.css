@@ -60,7 +60,7 @@ h3 {
 }
 
 h4 {
-    padding: 1em;
+    padding: 1rem 0;
     color: var(--text-color);
     font-size: 1.6em;
 }
@@ -80,7 +80,7 @@ h6 {
 
 p, article {
     color: var(--text-color);
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 /*TOP PAGE*/
@@ -176,7 +176,7 @@ img.ramen {
 }
 
 /*New Foods*/
-section.new-foods , .blog, .about {
+section.new-foods, .blog, .about {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -207,7 +207,6 @@ section.new-foods , .blog, .about {
     text-align: center;
     margin: 1rem 1rem;
     box-shadow: 1px 5px 15px 5px rgba(0,0,0,0.25);
-    overflow: hidden;
     transition: 300ms ease-out;
 }
 
@@ -240,10 +239,6 @@ section.new-foods , .blog, .about {
     align-items: center;
     text-align: center;
     padding-bottom: 2em;
-}
-
-.latest-blog-card {
-    padding: 2rem 1rem;
 }
 
 /*footer*/
@@ -300,6 +295,10 @@ footer {
 
     section.hero {
         padding: 0 16rem;
+    }
+
+    p, article {
+        font-size: 1.2rem;
     }
 }
 
