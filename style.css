@@ -1,23 +1,87 @@
 /*FONTS*/
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
 
 /*Colors*/
 :root {
-    --heafoo-bg: rgb(239,89,87);
-    --heafoo-color: rgb(240,144,132);
-    --text-color: #ffffff;
+    --heafoo-bg: #10316b;
+    --main-bg: #3e3636;
+    --card-color: #0B8458;
+    --text-color: #dee1ec;
 
 }
 
-/*BODY*/
+/*UNIVERSAL*/
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 20px;
 }
 
 body {
     font-family: 'Poppins', sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-bg);
+}
+
+/*TEXT*/
+h1 {
+    color: var(--text-color);
+    font-size: 3rem;
+    text-align: center;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.35);
+    padding: 1rem 3rem;
+    line-height: 1;
+    letter-spacing: 0.2rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    line-height: 0.88;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 2rem;
+    text-align: center;
+    padding: .5rem;
+    margin-top: 2rem;
+    color: var(--text-color);
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.35);
+}
+
+h4 {
+    padding: 1em;
+    color: var(--text-color);
+    font-size: 1.6em;
+}
+
+h5 {
+    color: var(--text-color);
+    padding-top: 1rem;
+    font-size: 1.6rem;
+}
+
+h6 {
+    color: var(--text-color);
+    font-size: 1.3rem;
+    padding-top: 0.8rem;
+    letter-spacing: 0.1rem;
+}
+
+p, article {
+    color: var(--text-color);
+    font-size: 1.2rem;
 }
 
 /*TOP PAGE*/
@@ -30,11 +94,6 @@ header {
     box-shadow: 1px 5px 15px 5px rgba(0,0,0,0.25);
 }
 
-h2 {
-    font-size: 1.5em;
-    line-height: 0.9;
-}
-
 .cursiveLogo {
     font-family: 'Parisienne', sans-serif;
 }
@@ -44,15 +103,21 @@ h2 {
     flex-direction: column;
     justify-content: start;
     text-align: center;
-    padding: 1em;
+    padding: 1rem;
     color: var(--text-color);
+    transition: 100ms;
+}
+
+.logo:hover {
+    color: var(--card-color);
+    transition: 250ms;
 }
 
 /*NAVIGATION*/
 nav {
     display: flex;
     align-items: center;
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
 }
 
 ul {
@@ -61,19 +126,27 @@ ul {
 
 li {
     display: inline;
-    padding: 1em;
-    font-weight: bold;
-    font-size: 1.2em;
+    padding: 1rem;
+    font-weight: 500;
+    font-size: 1rem;
 }
 
 a.nav-link {
     color: var(--text-color);
+    font-weight: 500;
+    transition: 100ms;
+}
+
+a:hover {
+    color: var(--card-color);
+    transition: 250ms;
 }
 
 /*GENERAL*/
 a {
     text-decoration: none;
     color: black;
+    transition: 250ms;
 }
 
 img {
@@ -83,29 +156,24 @@ img {
 }
 
 /*HERO*/
-h1 {
-    color: black;
-    font-size: 2.5em;
-    text-align: center;
-    text-shadow: 1px 1px 6px rgba(0,0,0,0.35);
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--heafoo-color);
-}
-
 section.hero {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: repeating-linear-gradient(90deg, rgba(236, 13, 35,0.5) 0px, rgba(236, 13, 35,0.5) 30px,transparent 30px, transparent 60px),repeating-linear-gradient(0deg, rgba(236, 13, 35,0.5) 0px, rgba(236, 13, 35,0.5) 30px,transparent 30px, transparent 60px),linear-gradient(90deg, hsl(94,64%,92%),hsl(94,64%,92%));
-    min-height: 30vh;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)), url(./img/pasta.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 80vh;
     width: 100%;
-    background-attachment: fixed;
+    padding: 0 4rem;
+}
+
+img.ramen {
+    margin-top: -0.8rem;
+    width: 3rem;
+    height: auto;
 }
 
 /*New Foods*/
@@ -118,30 +186,55 @@ section.new-foods , .blog, .about {
     padding-bottom: 2em;
 }
 
-h3 {
-    font-size: 2em;
-    text-align: center;
-    padding: .8em;
-    margin-top: 1.5em;
-    color: var(--text-color);
-    text-shadow: 1px 1px 6px rgba(0,0,0,0.35);
-
-}
-
-button.section-end-button {
-    background-color: var(--heafoo-bg);
-    color: var(--text-color);
-    padding: 1.5em 2.5em 1.5em 2.5em;
-    border: none;
-    border-radius: 2em;
-    font-weight: bold;
-    font-size: 1.2em;
-    margin-top: 2em;
-    box-shadow: 1px 5px 15px 5px rgba(0,0,0,0.25);
-}
-
 /*New Foods Cards*/
 .food-cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.food-card, .about-card, .latest-blog-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--card-color);
+    width: 90%;
+    height: auto;
+    padding: 2rem 3rem;
+    border-radius: 1em;
+    text-align: center;
+    margin: 1rem 1rem;
+    box-shadow: 1px 5px 15px 5px rgba(0,0,0,0.25);
+    overflow: hidden;
+    transition: 300ms ease-out;
+}
+
+.card-button, .section-end-button  {
+    background-color: var(--heafoo-bg);
+    padding: 0.8rem 1.3rem;
+    border: 5px solid var(--heafoo-bg);
+    border-radius: 1.8rem;
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 1rem;
+    box-shadow: 1px 5px 15px 5px rgba(0,0,0,0.25);
+    transition: 400ms;
+    cursor: pointer;
+}
+
+.card-button:hover, .section-end-button:hover {
+    background-color: var(--text-color);
+    color: var(--heafoo-bg);
+    transition: 600ms;
+}
+
+/*Blog*/
+
+.blog-cards {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -150,62 +243,11 @@ button.section-end-button {
     padding-bottom: 2em;
 }
 
-.food-card, .latest-blog-card {
-    background-color: var(--heafoo-bg);
-    width: 70%;
-    height: 100%;
-    padding: 2em;
-    border-radius: 1em;
-    text-align: center;
-    margin: 1em 0 1em 0;
-    box-shadow: 1px 5px 15px 5px rgba(0,0,0,0.25);
-}
-
-h5 {
-    color: var(--text-color);
-    padding-top: 1em;
-    font-size: 1.4em;
-}
-
-p {
-    color: white;
-    padding: .8em;
-    font-size: 1.2em;
-}
-
-button.card-button {
-    background-color: var(--heafoo-color);
-    padding: 1em 2em 1em 2em;
-    border: none;
-    border-radius: 2em;
-    color: var(--text-color);
-    font-weight: bold;
-    font-size: 1em;
-    margin: 1em;
-    box-shadow: 1px 5px 15px 5px rgba(0,0,0,0.25);
-}
-
-/*Blog*/
-h4 {
-    padding: 1em;
-    color: var(--text-color);
-    font-size: 1.2em;
-}
-
-article {
-    text-align: center;
-    color: var(--text-color);
-}
-
-/*About*/
-h6 {
-    color: var(--text-color);
-    font-size: 1.2em;
-    margin-top: 1em;
+.latest-blog-card {
+    padding: 2rem 2rem;
 }
 
 /*footer*/
-
 footer {
  min-width: 100%;
  background-color: var(--heafoo-bg);
@@ -221,215 +263,127 @@ footer {
 .some {
     display: flex;
     justify-content: center;
-    flex-direction: row;
+    align-items: center;
+    flex-direction: row; 
 }
 
 .someIcon {
-    height: 2.5em;
-    width: 2.5em;
-    padding: 1em;
+    height: 5rem;
+    width: 5rem;
+    padding: 1rem;
     margin: 0 1em 0 1em;
-    background-color: var(--heafoo-color);
+    background-color: var(--card-color);
+    border: 5px solid var(--card-color);
     border-radius: 1.5em;
+    transition: 200ms;
 }
 
-/*Responsive for tablet*/
+.someIcon:hover {
+    background-color: var(--text-color);
+    transition: 500ms;
+}
+
+/*Responsive for tablet & horizontal phone*/
 @media only screen and (min-width: 768px) {
-    
     header {
         flex-direction: row;
         justify-content: space-between;
-    }
-    
-    h2 {
-        font-size: 2em;
-    }
-    
-    .logo {
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        text-align: center;
-        padding: 2em;
-        color: var(--text-color);
+        padding: 0 1rem;
     }
 
     nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding-right: 2em ;
-        padding-top: 1em;
+        margin-bottom: 0;
     }
-    
-    
+
     li {
-        display: inline;
-        font-weight: bold;
-        font-size: 1.5em;
-    }
-    
-    h1 {
-        font-size: 3em;
+        font-size: 1.2rem;
     }
 
-    h3 {
-        font-size: 2.5em;
-    }
-
-    h5 {
-        font-size: 1.6em;
-    }
-    
-    p {
-        font-size: 1.4em;
-    }
-    
-    button.card-button {
-        font-size: 1.2em;
-    }
-
-    h4 {
-        padding: 1em;
-        font-size: 1.8em;
-    }
-    
-    article {
-        color: var(--text-color);
-        font-size: 1.2em;
+    section.hero {
+        padding: 0 16rem;
     }
 }
 
 /*Responsive small laptop*/
 @media only screen and (min-width: 1200px) {
-    
-    h2 {
-        font-size: 2.5em;
+    header {
+        padding: 1rem 2rem;
     }
     
-    .logo {
-        padding: 3em;
-        padding-left: 4em;
-    }
-
-    nav {
-        padding-right: 4em;
-    }
-    
-    ul {
-        list-style: none;
-    }
-    
-    li {
-        display: inline;
-        font-weight: bold;
-        font-size: 2em;
-    }
-    
-    h1 {
-        font-size: 4em;
-    }
-
     section.hero {
-        min-height: 40vh;
-    }
-
-    h3 {
-        margin-top: .6em;
-        font-size: 3em;
-    }
-
-    h5 {
-        font-size: 2em;
-    }
+        padding: 0 20rem;
+     }
 
     .food-cards{
         flex-direction: row;
-        justify-content: space-evenly;
-        padding-bottom: 1em;
-    }
-  
-    .food-card {
-        width: 25%;
     }
 
-    h6 {
-        font-size: 1.8em;
-        margin-top: 1em;
+    .card-button, .section-end-button  {
+        padding: 0.8rem 1.3rem;
+        font-size: 1.2rem;
     }
 
-    .about p {
-        padding: 0 4em 2em 4em;
+    .someIcon {
+        height: 3.5rem;
+        width: 3.5rem;
+        padding: 0.5rem;
+        border-radius: 1rem;
     }
 
-    .about button.section-end-button {
-        margin-bottom: 5em;
+    .food-card:hover {
+        transform: scale(1.02);
+        transition: 500ms ease;
     }
 }
 
 /*Responsive laptop*/
-@media only screen and (min-width: 1680px) {
-    
-    h2 {
-        font-size: 2.5em;
+@media only screen and (min-width: 1500px) {
+    header {
+        padding: 1rem 6rem;
     }
     
-    .logo {
-        padding: 3em;
-        padding-left: 4em;
-    }
-
-    nav {
-        padding-right: 4em;
-    }
-    
-    ul {
-        list-style: none;
-    }
-    
-    li {
-        display: inline;
-        font-weight: bold;
-        font-size: 2em;
-    }
-    
-    h1 {
-        font-size: 4em;
-    }
-
     section.hero {
-        min-height: 40vh;
+       padding: 0 30rem;
     }
 
-    h3 {
-        margin-top: .6em;
-        font-size: 3em;
-    }
-
-    h5 {
-        font-size: 2em;
-    }
-
-    .food-cards{
+    .blog-cards {
         flex-direction: row;
-        justify-content: space-evenly;
-        padding-bottom: 1em;
-    }
-  
-    .food-card {
-        width: 25%;
+        margin: 0 2rem;
     }
 
-    h6 {
-        font-size: 1.8em;
-        margin-top: 1em;
+    .food-card, .about-card, .latest-blog-card {
+        width: 80%;
     }
 
-    .about p {
-        padding: 0 4em 2em 4em;
+    .about-card {
+        padding: 2rem 6rem;
     }
 
-    .about button.section-end-button {
-        margin-bottom: 5em;
+    .latest-blog-card {
+        padding: 4rem 6rem;
+    }
+}
+
+/*Responsive laptop*/
+@media only screen and (min-width: 1820px) {
+    section.hero {
+       padding: 0 40rem;
+    }
+
+    .blog-cards {
+        flex-direction: row;
+        margin: 0 2rem;
+    }
+
+    .food-card, .latest-blog-card {
+        width: 80%;
+    }
+
+    .food-cards, .blog, .about{
+        margin: 0 6rem;
+    }
+
+    .about-card {
+        width: 60%;
     }
 }
