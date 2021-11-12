@@ -1,0 +1,240 @@
+/*Body*/
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-bg);
+    width: 100%;
+}
+
+/*Links*/
+a {
+    text-decoration: none;
+    color: black;
+    transition: 250ms;
+}
+
+a:hover {
+    color: var(--card-color);
+    transition: 250ms;
+}
+
+/*HERO*/
+section.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)), url(/img/pasta.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 80vh;
+    width: 100%;
+}
+
+.hero-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 40%;
+    position: relative;
+    animation: push 3s infinite ease-in-out;
+}
+
+/*Hero Animation*/
+@keyframes push {
+    0% {margin-top: 0;}
+    50% {margin-top: 2.5rem;}
+    100% {margin-top: 0;}
+}
+/*END OF HERO*/
+
+/*Images*/
+img.ramen {
+    padding-top: 0.4rem;
+    width: 3rem;
+    height: auto;
+}
+
+img.food-thumbnail {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1rem;
+}
+
+img.float-pasta {
+    max-width: 70%;
+    position: relative;
+    animation: pasta 3s infinite ease-in-out;
+    transform: rotateZ(-5deg);
+}
+
+/*Section layout*/
+section.new-foods, .blog, .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 2em;
+}
+
+/*Card layout*/
+.food-cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.blog-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 2em;
+}
+
+/*Card*/
+.food-card, .about-card, .latest-blog-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--card-color);
+    width: 90%;
+    height: auto;
+    padding: 2rem 2rem;
+    border-radius: 1em;
+    text-align: center;
+    margin: 1rem 1rem;
+    box-shadow: 1px 5px 15px 5px rgba(0,0,0,0.25);
+    transition: 300ms ease-out;
+}
+
+/*buttons*/
+.card-button, .section-end-button  {
+    background-color: var(--heafoo-bg);
+    padding: 0.8rem 1.3rem;
+    border: 5px solid var(--heafoo-bg);
+    border-radius: 1.8rem;
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 1rem;
+    box-shadow: 1px 5px 15px 5px rgba(0,0,0,0.25);
+    transition: 400ms;
+    cursor: pointer;
+}
+
+.card-button:hover, .section-end-button:hover {
+    background-color: var(--text-color);
+    color: var(--heafoo-bg);
+    transition: 600ms;
+}
+
+/*-------------------MEDIA QUERIES-------------------*/
+/*TABLET*/
+@media only screen and (min-width: 768px) {
+
+    .hero-logo {
+        max-width: 30%;
+    }
+}
+
+/*SMALL LAPTOP*/
+@media only screen and (min-width: 1200px) {
+
+    .food-cards{
+        flex-direction: row;
+    }
+
+    .card-button, .section-end-button  {
+        padding: 0.8rem 1.3rem;
+        font-size: 1.2rem;
+    }
+
+    .food-card:hover {
+        transform: scale(1.02);
+        transition: 500ms ease;
+    }
+
+    .hero-logo {
+        max-width: 20%;
+    }
+
+    img.float-pasta {
+        transform: rotateZ(0deg);
+    }
+
+    .inner-about {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /*Pasta Animation*/
+    @keyframes pasta {
+        0% {margin-top: 0;}
+        14.3% {margin-top: 0.5rem; transform: rotateZ(0deg);}
+        28.6% {margin-top: 0.5rem; transform: rotateZ(0.5deg);}
+        42.9% {margin-top: 0.5rem; transform: rotateZ(-0.5deg);}
+        57.2% {margin-top: -0.5rem; transform: rotateZ(0deg);}
+        71.8% {margin-top: -0.5rem; transform: rotateZ(0.5deg);}
+        86% {margin-top: -0.5rem; transform: rotateZ(-0.5deg);}
+        100% {margin-top: 0;}
+    }
+}
+
+/*DESKTOP & LARGE LAPTOP*/
+@media only screen and (min-width: 1500px) {
+
+    .blog-cards {
+        flex-direction: row;
+        margin: 0 2rem;
+    }
+
+    .food-card, .about-card, .latest-blog-card {
+        width: 80%;
+    }
+
+    .about-card {
+        padding: 2rem 6rem;
+    }
+
+    .latest-blog-card {
+        padding: 4rem 6rem;
+    }
+}
+
+/*LARGER SCREENS*/
+@media only screen and (min-width: 1820px) {
+
+    .blog-cards {
+        flex-direction: row;
+        margin: 0 2rem;
+    }
+
+    .food-card, .latest-blog-card {
+        width: 80%;
+    }
+
+    .food-cards, .blog, .about{
+        margin: 0 6rem;
+    }
+
+    .about-card {
+        width: 60%;
+    }
+
+    .hero-logo {
+        max-width: 10%;
+    }
+}

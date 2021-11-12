@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Valtterin Muiskismaiskis Setit</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
     <header>
@@ -20,7 +21,7 @@
             <ul>
                 <li><a class="nav-link" href="#">Eväät</a></li>
                 <li><a class="nav-link" href="#">Blogi</a></li>
-                <li><a class="nav-link" href="#">Minusta</a></li>
+                <li><a class="nav-link" href="#aboutme">Minusta</a></li>
             </ul>
         </nav>
     </header>
@@ -35,7 +36,7 @@
             <div class="food-cards">
                 <div class="food-card">
                     <figure>
-                        <img src="img/juustohampurilainen-2.jpg" alt="ruoka">
+                        <img class="food-thumbnail" src="img/juustohampurilainen-2.jpg" alt="ruoka">
                     </figure>
                     <h5>Uusi setti</h5>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, fuga.</p>
@@ -43,7 +44,7 @@
                 </div>
                 <div class="food-card">
                     <figure>
-                        <img src="img/juustohampurilainen-2.jpg" alt="ruoka">
+                        <img class="food-thumbnail" src="img/juustohampurilainen-2.jpg" alt="ruoka">
                     </figure>
                     <h5>Uusi setti</h5>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, fuga.</p>
@@ -51,7 +52,7 @@
                 </div>
                 <div class="food-card">
                     <figure>
-                        <img src="img/juustohampurilainen-2.jpg" alt="ruoka">
+                        <img class="food-thumbnail" src="img/juustohampurilainen-2.jpg" alt="ruoka">
                     </figure>
                     <h5>Uusi setti</h5>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, fuga.</p>
@@ -74,14 +75,19 @@
             </div>
             <button class="section-end-button">Tutustu kaikkiin artikkeleihin</button>
         </section>
-        <section class="about">
+        <section id="aboutme" class="about">
             <h3>Pikaisesti Minusta</h3>
-            <div class="about-card">
-                <h6>Kuka olen</h6>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A illo, facere at ipsam laudantium eum corporis reprehenderit culpa, quasi non amet assumenda necessitatibus architecto dolores?</p>
-                <h6>Sivun tarkoitus</h6>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa repudiandae impedit laudantium, laboriosam cum inventore illo molestias quisquam!</p>
-                <button class="section-end-button">Tutustu minuun</button>
+            <div class="inner-about">
+                <div class="about-card">
+                    <h6>Kuka olen</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A illo, facere at ipsam laudantium eum corporis reprehenderit culpa, quasi non amet assumenda necessitatibus architecto dolores?</p>
+                    <h6>Sivun tarkoitus</h6>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa repudiandae impedit laudantium, laboriosam cum inventore illo molestias quisquam!</p>
+                    <button class="section-end-button">Tutustu minuun</button>
+                </div>
+                <figure>
+                    <img class="float-pasta" src="img/pasta-leikattu.png" alt="Pasta">
+                </figure>
             </div>
         </section>
     <footer>
@@ -98,5 +104,11 @@
             <h6><a href="#">Rekisteri</a></h6>
         </div>
     </footer>
+    <div class="back-to-top">
+        <div id="scrollToTop" class="back-to-top-inner">
+            <a href="#"><img src="/img/arrow-up.svg" alt="arrow-up"></a>
+        </div>
+    </div>
+    <script src="script/scroll.js"></script>
 </body>
 </html>
