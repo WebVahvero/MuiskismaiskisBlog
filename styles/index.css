@@ -27,7 +27,7 @@ section.hero {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)), url(img/pasta.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)), url(../img/pasta.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
