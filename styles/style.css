@@ -20,7 +20,7 @@
 }
 /*END OF RESET*/
 
-/*ROOT FONT SIZE & SMOOHT SCROLL*/
+/*ROOT FONT SIZE & SMOOTH SCROLL*/
 html {
     font-size: 20px;
     scroll-behavior: smooth;
