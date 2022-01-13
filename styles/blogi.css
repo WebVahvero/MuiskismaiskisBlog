@@ -1,0 +1,157 @@
+section.new-foods {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 2em;
+}
+
+.food-cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.food-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 90%;
+    height: 600px;
+    padding: 2rem 2rem 1rem 2rem;
+    border-radius: 1em;
+    text-align: center;
+    margin: 1rem 1rem;
+    box-shadow: 1px 5px 15px 5px rgba(0,0,0,0.25);
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+h5.food-heading {
+    visibility: hidden;
+}
+
+.food-card:first-of-type {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75)), url(../img/fetapasta.jpg);
+}
+
+.food-card:nth-of-type(2) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75)), url(../img/keburulla.jpg);
+}
+
+.food-card:nth-of-type(3) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75)), url(../img/mummonkurkut.jpg);
+}
+
+@media only screen and (min-width: 1200px) {
+
+    .food-cards{
+        flex-direction: row;
+    }
+
+    .food-card {
+        position: relative;
+        justify-content: center;
+        transition: 300ms ease-out;
+    }
+    
+
+    h5.food-heading {
+        visibility: visible;
+        color: var(--text-color);
+        background-color: var(--heafoo-bg);
+        padding: 0.5rem;
+        margin-bottom: 0;
+        border-radius: 0.6rem;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 1;
+        bottom: 0;
+    }
+
+    .food-card-inner {
+        visibility: hidden;
+        transition: 50ms ease-in-out;
+    }
+
+    .food-card:first-of-type {
+        background-image: url(../img/fetapasta.jpg);
+    }
+    
+    .food-card:nth-of-type(2) {
+        background-image: url(../img/keburulla.jpg);
+    }
+    
+    .food-card:nth-of-type(3) {
+        background-image: url(../img/mummonkurkut.jpg);
+    }
+
+    .food-card:first-of-type:hover {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75)), url(../img/fetapasta.jpg);
+    }
+
+    .food-card:nth-of-type(2):hover {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75)), url(../img/keburulla.jpg);
+    }
+
+    .food-card:nth-of-type(3):hover {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75)), url(../img/mummonkurkut.jpg);
+    }
+
+    .food-card:hover > h5.food-heading {
+       visibility: hidden;
+       transition: 10ms ease-in-out;
+    }
+
+    .food-card:hover > .food-card-inner {
+        visibility: visible;
+        transition: 500ms ease-in-out;
+     }
+
+    .food-card:hover, .about-card:hover {
+        transform: scale(1.02);
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    .food-card {
+        width: 80%;
+    }
+}
+
+@media only screen and (min-width: 1820px) {
+
+    .blog-cards {
+        flex-direction: row;
+        margin: 0 2rem;
+    }
+
+    .food-card, .latest-blog-card {
+        width: 80%;
+    }
+
+    .food-cards, .blog, .about{
+        margin: 0 6rem;
+    }
+
+    .about-card {
+        width: 60%;
+    }
+
+    .hero-logo {
+        max-width: 10%;
+    }
+}
+
+@media only screen and (min-width: 1820px) {
+
+    .food-cards {
+        margin: 0 6rem;
+    }
+}

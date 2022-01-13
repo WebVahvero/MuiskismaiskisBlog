@@ -23,9 +23,31 @@
 /*ROOT FONT SIZE & SMOOTH SCROLL*/
 html {
     font-size: 20px;
+    font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
 }
 /*END OF ROOT FONT SIZE*/
+
+/*Body*/
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-bg);
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    transition: 10ms;
+}
+
+a:hover, .nav-link:hover {
+    color: var(--card-color);
+    transition: 10ms;
+}
 
 /*FONT SIZE*/
 h1 {
@@ -61,6 +83,8 @@ h5 {
     color: var(--text-color);
     padding-top: 1rem;
     font-size: 1.6rem;
+    line-height: 1;
+    margin-bottom: 0.5rem;
 }
 
 h6 {
@@ -172,7 +196,7 @@ a.nav-link {
     justify-content: center;
     align-items: center;
     padding: 1rem;
-    background-color: white !important;
+    background-color: white;
     width: 2rem;
     height: 2rem;
     padding-bottom: 15px;
@@ -186,6 +210,27 @@ a.nav-link {
     opacity:1;
 }
 /*---END OF SCROLLBAR---*/
+
+/*buttons*/
+.card-button, .section-end-button  {
+    background-color: var(--heafoo-bg);
+    padding: 0.8rem 1.3rem;
+    border: 5px solid var(--heafoo-bg);
+    border-radius: 1.8rem;
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 1rem;
+    box-shadow: 1px 5px 15px 5px rgba(0,0,0,0.25);
+    cursor: pointer;
+    transition: 10ms ease-in-out;
+}
+
+.card-button:hover, .section-end-button:hover {
+    background-color: var(--text-color);
+    color: var(--heafoo-bg);
+    transition: 500ms;
+}
 
 /*FOOTER*/
 footer {
@@ -251,6 +296,11 @@ footer {
 @media only screen and (min-width: 1200px) {
     header {
         padding: 1rem 2rem;
+    }
+
+    .card-button, .section-end-button  {
+        padding: 0.8rem 1.3rem;
+        font-size: 1.2rem;
     }
 
     .someIcon {
